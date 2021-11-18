@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 func testInsertionSort() {
     let arr = ArrayGenerator.generateRandomArray(n: 1000, bound: 1000)
     SortHelper.sortText(sortClass: InsertionSort(), arr: arr)
@@ -52,5 +51,39 @@ func testLinkListStack() {
     print(stack)
 }
 
+func testLinkListQueue() {
+    let queue = LinkListQueue<Int>()
+    for i in 0..<10 {
+        queue.enqueue(i)
+        print(queue)
+        
+        if i % 3 == 2 {
+            queue.dequeue()
+            print(queue)
+        }
+    }
+}
 
-testLinkListStack()
+func testLeetCode206() {
+    let head = ListNode(1)
+    let next1 = ListNode(2)
+    let next2 = ListNode(3)
+    let next3 = ListNode(4)
+    let tail = ListNode(5)
+    
+    head.next = next1
+    next1.next = next2
+    next2.next = next3
+    next3.next = tail
+    
+    let result = LeetCode206.reverseList2(head: head)
+    
+}
+
+func testMergeSort() {
+    let arr = ArrayGenerator.generateRandomArray(n: 100000, bound: 100000)
+    SortHelper.sortText(sortClass: MergeSort(), arr: arr)
+}
+
+
+testMergeSort()

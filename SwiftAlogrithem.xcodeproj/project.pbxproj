@@ -11,6 +11,11 @@
 		49017C7427434A82004E84CA /* LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49017C7327434A82004E84CA /* LinkList.swift */; };
 		49017C76274380BD004E84CA /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49017C75274380BD004E84CA /* Stack.swift */; };
 		49017C7827438139004E84CA /* LinkListStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49017C7727438139004E84CA /* LinkListStack.swift */; };
+		49017C7A274387A1004E84CA /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49017C79274387A1004E84CA /* Queue.swift */; };
+		49017C7C2743885B004E84CA /* LinkListQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49017C7B2743885B004E84CA /* LinkListQueue.swift */; };
+		49017C7E2743FA75004E84CA /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49017C7D2743FA74004E84CA /* Sum.swift */; };
+		498E09612745D85D00EB1182 /* LeetCode206.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498E09602745D85D00EB1182 /* LeetCode206.swift */; };
+		498E09632745EE1700EB1182 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498E09622745EE1700EB1182 /* MergeSort.swift */; };
 		4992E611273C017200BD1DA4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992E610273C017200BD1DA4 /* main.swift */; };
 		4992E61D273C01F000BD1DA4 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992E618273C01EF00BD1DA4 /* InsertionSort.swift */; };
 		4992E61E273C01F000BD1DA4 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992E619273C01EF00BD1DA4 /* SelectionSort.swift */; };
@@ -36,6 +41,11 @@
 		49017C7327434A82004E84CA /* LinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkList.swift; sourceTree = "<group>"; };
 		49017C75274380BD004E84CA /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		49017C7727438139004E84CA /* LinkListStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkListStack.swift; sourceTree = "<group>"; };
+		49017C79274387A1004E84CA /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		49017C7B2743885B004E84CA /* LinkListQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkListQueue.swift; sourceTree = "<group>"; };
+		49017C7D2743FA74004E84CA /* Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sum.swift; sourceTree = "<group>"; };
+		498E09602745D85D00EB1182 /* LeetCode206.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode206.swift; sourceTree = "<group>"; };
+		498E09622745EE1700EB1182 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		4992E60D273C017200BD1DA4 /* SwiftAlogrithem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftAlogrithem; sourceTree = BUILT_PRODUCTS_DIR; };
 		4992E610273C017200BD1DA4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4992E618273C01EF00BD1DA4 /* InsertionSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
@@ -90,6 +100,7 @@
 			children = (
 				4992E618273C01EF00BD1DA4 /* InsertionSort.swift */,
 				4992E619273C01EF00BD1DA4 /* SelectionSort.swift */,
+				498E09622745EE1700EB1182 /* MergeSort.swift */,
 			);
 			path = "基础排序";
 			sourceTree = "<group>";
@@ -101,6 +112,10 @@
 				49017C7327434A82004E84CA /* LinkList.swift */,
 				49017C75274380BD004E84CA /* Stack.swift */,
 				49017C7727438139004E84CA /* LinkListStack.swift */,
+				49017C79274387A1004E84CA /* Queue.swift */,
+				49017C7B2743885B004E84CA /* LinkListQueue.swift */,
+				49017C7D2743FA74004E84CA /* Sum.swift */,
+				498E09602745D85D00EB1182 /* LeetCode206.swift */,
 			);
 			path = "数据结构基础";
 			sourceTree = "<group>";
@@ -163,15 +178,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4992E611273C017200BD1DA4 /* main.swift in Sources */,
+				49017C7C2743885B004E84CA /* LinkListQueue.swift in Sources */,
 				49017C76274380BD004E84CA /* Stack.swift in Sources */,
 				49017C7827438139004E84CA /* LinkListStack.swift in Sources */,
+				49017C7A274387A1004E84CA /* Queue.swift in Sources */,
 				4992E621273C01F000BD1DA4 /* ArrayGenerator.swift in Sources */,
 				49017BB9273D585B004E84CA /* ValidParenttheses.swift in Sources */,
 				49017C7427434A82004E84CA /* LinkList.swift in Sources */,
 				4992E620273C01F000BD1DA4 /* SortHelper.swift in Sources */,
+				498E09632745EE1700EB1182 /* MergeSort.swift in Sources */,
 				4992E61F273C01F000BD1DA4 /* Sortable.swift in Sources */,
 				4992E61E273C01F000BD1DA4 /* SelectionSort.swift in Sources */,
+				498E09612745D85D00EB1182 /* LeetCode206.swift in Sources */,
 				4992E61D273C01F000BD1DA4 /* InsertionSort.swift in Sources */,
+				49017C7E2743FA75004E84CA /* Sum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
