@@ -14,10 +14,10 @@ func testInsertionSort() {
 
 func testValidParenttheses() {
     let str1 = "()[]{}"
-    let result1 = ValidParenttheses.isValid(str: str1)
+    let result1 = LeetCode20.isValid(str: str1)
 
     let str2 = "([}])"
-    let result2 = ValidParenttheses.isValid(str: str2)
+    let result2 = LeetCode20.isValid(str: str2)
     print("result1:\(result1) result2:\(result2)")
 }
 
@@ -81,9 +81,23 @@ func testLeetCode206() {
 }
 
 func testMergeSort() {
-    let arr = ArrayGenerator.generateRandomArray(n: 100000, bound: 100000)
+    let arr = ArrayGenerator.generateRandomArray(n: 10000, bound: 100000)
     SortHelper.sortText(sortClass: MergeSort(), arr: arr)
 }
 
+func textLeetCode51() {
+    let arr = [7,5,6,4]
+    print("\(LeetCode51().reversePairs(arr))")
+    
+}
 
-testMergeSort()
+func testQuickSort() {
+  
+    var arr = ArrayGenerator.generateOrderdArray(n: 5000)
+    let start = CFAbsoluteTimeGetCurrent()
+    QuickSort().quickSort(arr: &arr)
+    let end = CFAbsoluteTimeGetCurrent()
+    let duration = end - start
+    print("执行时间：\(duration)")
+}
+testQuickSort()

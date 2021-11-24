@@ -18,4 +18,12 @@ class ArrayGenerator {
         }
         return array
     }
+    
+    static func generateOrderdArray(n:Int) -> [Int] {
+        var array:[Int] = []
+        for i in 0...n {
+            array.append(i)
+        }
+        return array
+    }
 }

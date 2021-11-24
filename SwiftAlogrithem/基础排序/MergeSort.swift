@@ -25,7 +25,6 @@ class MergeSort:Sortable {
         let leftArray = sort(arr: Array(arr[0..<middleIndex]))             // 3
         
         let rightArray = sort(arr: Array(arr[middleIndex..<arr.count]))  // 4
-        
         return merge(leftPile: leftArray, rightPile: rightArray)
     }
     
@@ -35,10 +34,7 @@ class MergeSort:Sortable {
     private func merge<T>(leftPile: [T], rightPile: [T]) -> [T] where T : Comparable {
         var leftIndex = 0
         var rightIndex = 0
-        
-        // 2
         var orderedPile:[T] = []
-        orderedPile.reserveCapacity(leftPile.count + rightPile.count)
         
         // 3
         while leftIndex < leftPile.count && rightIndex < rightPile.count {
@@ -55,13 +51,13 @@ class MergeSort:Sortable {
                 rightIndex += 1
             }
         }
-        
-        // 4
+         
+        // 4 左边数组还有未比较的数字
         while leftIndex < leftPile.count {
             orderedPile.append(leftPile[leftIndex] )
             leftIndex += 1
         }
-        
+        // // 右边数组还有未比较的数字
         while rightIndex < rightPile.count {
             orderedPile.append(rightPile[rightIndex] )
             rightIndex += 1

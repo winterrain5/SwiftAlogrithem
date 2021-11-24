@@ -17,7 +17,7 @@ class SortHelper {
             print("\(sortClass) failed")
             return
         }
-        print("执行时间：\(duration)s")
+        print("\(sortClass) 执行时间：\(duration)s")
     }
     
     static func isSorted<T:Comparable>(arr:[T]) -> Bool {

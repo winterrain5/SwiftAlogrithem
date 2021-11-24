@@ -7,7 +7,7 @@
 
 import Cocoa
 /// 括号匹配
-class ValidParenttheses {
+class LeetCode20 {
 
     static func  isValid(str:String) -> Bool {
         var stack:[Character] = []
