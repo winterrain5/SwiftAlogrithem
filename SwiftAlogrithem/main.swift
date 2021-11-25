@@ -93,11 +93,32 @@ func textLeetCode51() {
 
 func testQuickSort() {
   
-    var arr = ArrayGenerator.generateOrderdArray(n: 5000)
+    var arr = ArrayGenerator.generateRandomArray(n: 5000000, bound: 10000)
     let start = CFAbsoluteTimeGetCurrent()
     QuickSort().quickSort(arr: &arr)
     let end = CFAbsoluteTimeGetCurrent()
     let duration = end - start
     print("执行时间：\(duration)")
+    
+    let start1 = CFAbsoluteTimeGetCurrent()
+    QuickSort2().quickSort(arr: &arr)
+    let end1 = CFAbsoluteTimeGetCurrent()
+    let duration1 = end1 - start1
+    print("执行时间1：\(duration1)")
+    
+    let start2 = CFAbsoluteTimeGetCurrent()
+    QuickSort3().quickSort(arr: &arr)
+    let end2 = CFAbsoluteTimeGetCurrent()
+    let duration2 = end2 - start2
+    print("执行时间2：\(duration2)")
 }
-testQuickSort()
+
+func testSelectK() {
+    var arr = [3,2,6,4,7]
+    let result = SelectK.findKthLargest(nums: &arr, k: 3)
+    print("findKthLargest: \(result)")
+    
+    let result1 = SelectK.getLeastNums(arr: &arr, k: 2)
+    print("getLeastNums: \(result1)")
+}
+testSelectK()
