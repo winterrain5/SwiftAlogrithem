@@ -9,11 +9,16 @@ import Foundation
 
 protocol Stack {
     associatedtype E
+    
     func getSize() -> Int
+    
     func isEmpty() -> Bool
+   
     @discardableResult
     func pop() -> E?
+    
     @discardableResult
     func peek() -> E?
+    
     func push(_ e:E)
 }

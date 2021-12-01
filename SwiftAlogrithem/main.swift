@@ -108,17 +108,60 @@ func testQuickSort() {
     
     let start2 = CFAbsoluteTimeGetCurrent()
     QuickSort3().quickSort(arr: &arr)
-    let end2 = CFAbsoluteTimeGetCurrent()
-    let duration2 = end2 - start2
-    print("执行时间2：\(duration2)")
+    
+    
 }
 
 func testSelectK() {
     var arr = [3,2,6,4,7]
     let result = SelectK.findKthLargest(nums: &arr, k: 3)
     print("findKthLargest: \(result)")
-    
     let result1 = SelectK.getLeastNums(arr: &arr, k: 2)
     print("getLeastNums: \(result1)")
 }
-testSelectK()
+
+func testBinarySearch() {
+    var arr = ArrayGenerator.generateRandomArray(n: 10000, bound: 10000)
+    QuickSort2().quickSort(arr: &arr)
+    let start2 = CFAbsoluteTimeGetCurrent()
+    let result = BinarySearch2.search(arr, 10)
+    let end2 = CFAbsoluteTimeGetCurrent()
+    let duration2 = end2 - start2
+    print("执行时间2：\(duration2)")
+    print(result)
+}
+
+func testShipDays() {
+    let arr = [1,2,3,4,5,6,7,8,9,10]
+    let start2 = CFAbsoluteTimeGetCurrent()
+    let result = LeetCode1011().shipWithinDays(arr, 5)
+    let end2 = CFAbsoluteTimeGetCurrent()
+    let duration2 = end2 - start2
+    print("执行时间2：\(duration2) result \(result)")
+    
+    let a = 9 / 2
+    print(a)
+}
+
+func testBST() {
+    let bst = BST<Int>()
+    let nums = [5,3,6,8,4,2]
+    nums.forEach { n in
+        bst.add(n)
+    }
+
+    bst.preOrder ()
+    print("\n")
+//    let min = bst.removeMin()
+//    print(min)
+    bst.remove(3)
+    print(bst)
+   
+}
+
+func testLeetCode804() {
+    let result = LeetCode804().uniqueMorseRepresentations(["gin", "zen", "gig", "msg"])
+    print(result)
+}
+
+testLeetCode804()

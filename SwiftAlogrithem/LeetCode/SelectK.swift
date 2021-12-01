@@ -46,11 +46,11 @@ class SelectK {
     // 求第k大元素
     /*
      非常简单,我们只需在调用 select之南,将求第k大元的这个k,转换成对应求的是第几小元对应的素引好了
-     按题目描述,如果k是1,对应就是找量大元素,那么相应的我们的 selectl的素引,就是s, length-1
+     按题目描述,如果k是1,对应就是找最大元素,那么相应的我们的 selectk的素引,就是s, length-1
      如果k是nuns.1 ength,其实就是求最小元素。那么那么相应的我们的 select的素引,就是0,
      */
     static func findKthLargest(nums:inout [Int],k:Int) -> Int{
-        return selectK(arr: &nums, l: 0, r: nums.count - 2, k: nums.count - k)
+        return selectK(arr: &nums, l: 0, r: nums.count - 1, k: nums.count - k)
     }
     
     // 最小的k个数
@@ -66,7 +66,7 @@ class SelectK {
         arr.enumerated().forEach { i,e in
             if i < k {
                 result.append(e)
-            }
+            } 
         }
         return result
     }
