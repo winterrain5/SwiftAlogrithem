@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// O(n^2)
 class SelectionSort:Sortable {
     func sort(arr:[Int]) -> [Int]{
         var a = arr

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// O(n^2)
 class InsertionSort:Sortable {
     func sort<T>(arr: [T]) -> [T] where T : Comparable {
         var a = arr

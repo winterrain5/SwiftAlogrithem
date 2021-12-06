@@ -17,6 +17,13 @@ class MaxHeap<E> where E : Comparable {
         data = Array()
     }
     
+    init(_ arr:[E]) {
+        data = arr
+        for i in 0...parent(arr.count - 1) {
+            siftDown(index: i)
+        }
+    }
+    
     /// 返回完全二叉树的数组表示中，一个索引表示的元素的父亲节点的索引
     private func parent(_ index:Int) -> Int {
         if index == 0 {
@@ -57,7 +64,7 @@ class MaxHeap<E> where E : Comparable {
         let ret = findMax()
         data.swapAt(0, data.count - 1)
         data.removeLast()
-        siftUp(index: 0)
+        siftDown(index: 0)
         return ret
     }
     private func siftDown(index:Int) {
@@ -76,4 +83,14 @@ class MaxHeap<E> where E : Comparable {
             k = j
         }
     }
+    
+    /// 取出堆中最大的元素，并且替换成e
+    public func replace(_ e:E) -> E {
+        let ret = findMax()
+        data.insert(e, at: 0)
+        siftDown(index: 0)
+        return ret
+    }
+    
+    
 }

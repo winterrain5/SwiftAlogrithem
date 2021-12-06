@@ -16,6 +16,7 @@ import Foundation
  /将 arr(l,mid]和arr[mid+1,r]合并
  merge (arr, l, mid, r)
  */
+// O(nlogn)
 class MergeSort:Sortable {
     func sort<T>(arr: [T]) -> [T] where T : Comparable {
         guard arr.count > 1 else { return arr }    // 1

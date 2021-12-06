@@ -164,4 +164,34 @@ func testLeetCode804() {
     print(result)
 }
 
-testLeetCode804()
+func testHeapSort() {
+    let arr = ArrayGenerator.generateRandomArray(n: 1000000, bound: 100000)
+    SortHelper.sortText(sortClass: HeapSort(), arr: arr)
+}
+
+func testBubbleSort() {
+    let arr = ArrayGenerator.generateRandomArray(n: 10000, bound: 10000)
+    SortHelper.sortText(sortClass: BubbleSort(), arr: arr)
+}
+
+func testShellSort() {
+    let arr = ArrayGenerator.generateRandomArray(n: 100000, bound: 100000)
+    SortHelper.sortText(sortClass: ShellSort(), arr: arr)
+    
+//    SortHelper.sortText(sortClass:InsertionSort(), arr: arr)
+}
+
+func testSegmentTree() {
+//    LeetCode().isPalindrome("A man, a plan, a canal: Panama")
+    let nums = [1, 2, 3, 4]
+    let sumSegmentTree = SegmentTree(array: nums, leftBound: 0, rightBound: nums.count - 1, function: +)
+    let a = sumSegmentTree.query(withLeftBound: 0, rightBound: 3)  // 1 + 2 + 3 + 4 = 10
+    let b = sumSegmentTree.query(withLeftBound: 1, rightBound: 2)  // 2 + 3 = 5
+    let c = sumSegmentTree.query(withLeftBound: 0, rightBound: 0)  // just 1
+    let d = sumSegmentTree.query(withLeftBound: 3, rightBound: 3)  // just 4
+    
+    
+}
+
+
+testSegmentTree()

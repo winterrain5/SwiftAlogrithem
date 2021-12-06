@@ -37,7 +37,7 @@ class BinarySearch2 {
         }
         return l
     }
-    
+     
     // 大于 target 的最小值的索引
     // 等于 target 返回最大索引
     static func ceil(_ nums:[Int],_ target:Int) -> Int {

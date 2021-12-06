@@ -6,7 +6,7 @@
 //
 
 import Cocoa
-
+// O(nlogn)
 class QuickSort: Sortable {
     func sort<T>(arr: [T]) -> [T] where T : Comparable {
         guard arr.count > 1 else { return arr }
