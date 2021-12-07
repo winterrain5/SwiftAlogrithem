@@ -190,8 +190,18 @@ func testSegmentTree() {
     let c = sumSegmentTree.query(withLeftBound: 0, rightBound: 0)  // just 1
     let d = sumSegmentTree.query(withLeftBound: 3, rightBound: 3)  // just 4
     
-    
+    print(a,b,c,d)
 }
 
+func testTrie() {
+    let word = ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+    let trie = Trie();
+    trie.insert(word: "apple");
+//    let a = trie.search("apple");   // 返回 True
+//    let b = trie.search("app");     // 返回 False
+//    let c = trie.startsWith("app"); // 返回 True
+//    trie.insert("app");
+//    let d = trie.search("app");  // 返回 True
 
-testSegmentTree()
+}
+testTrie()

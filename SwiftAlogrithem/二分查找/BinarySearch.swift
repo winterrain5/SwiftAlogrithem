@@ -18,8 +18,9 @@ class BinarySearch {
         let mid = l + (r - l) / 2
         
         if data[mid] == target { return mid }
-        if data[mid] < target { return search(data: data, l: mid + 1, r: r, target: target)}
-        
+        if data[mid] < target {
+            return search(data: data, l: mid + 1, r: r, target: target)
+        }
         return search(data: data, l:l, r: mid - 1, target: target)
     }
 }

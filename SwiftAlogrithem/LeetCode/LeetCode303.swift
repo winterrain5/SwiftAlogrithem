@@ -17,3 +17,20 @@ class LeetCode303 {
         return segmentTree.query(withLeftBound: left, rightBound: right)
     }
 }
+
+class LeetCode303_2 {
+    /// sum[i] 存储前i个元素的和
+    private var sums:[Int] = []
+    
+    init(_ nums: [Int]) {
+        sums = nums
+        sums.insert(0, at: 0)
+        for i in 1...nums.count {
+            sums[i] = sums[i - 1] + nums[i - 1]
+        }
+    }
+    
+    func sumRange(_ left: Int, _ right: Int) -> Int {
+        return sums[right + 1] - sums[left]
+    }
+}
