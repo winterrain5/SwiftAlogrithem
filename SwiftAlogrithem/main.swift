@@ -202,6 +202,10 @@ func testTrie() {
 //    let c = trie.startsWith("app"); // 返回 True
 //    trie.insert("app");
 //    let d = trie.search("app");  // 返回 True
-
+    
 }
-testTrie()
+
+func testLeetCode() {
+    print(LeetCode516.longestPalindromeSubseq("bbbab"))
+}
+testLeetCode()

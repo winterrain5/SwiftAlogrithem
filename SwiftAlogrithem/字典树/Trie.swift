@@ -63,6 +63,7 @@ class Trie: NSObject, NSCoding {
     root = Node()
     wordCount = 0
     super.init()
+    
   }
 
   // MARK: NSCoding
